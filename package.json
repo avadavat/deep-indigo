@@ -1,12 +1,22 @@
 {
   "name": "deep-indigo",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "dependencies": {
-    "leftovers-again": "^0.11.7",
+    "leftovers-again": "^0.11.*",
     "patch-package": "^6.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
   "scripts": {
+    "develop": "nodemon src/app.js",
+    "start": "node src/app.js",
+    "server": "cd Pokemon-Showdown && npm start",
     "postinstall": "patch-package"
-  }
+  },
+  "description": "the very best",
+  "main": "src/bot.js",
+  "format": "gen7randombattle",
+  "accepts": "ALL",
+  "nickname": "Deepindigo"
 }
