@@ -2,7 +2,7 @@
   "name": "deep-indigo",
   "version": "0.0.0",
   "dependencies": {
-    "leftovers-again": "^0.11.*",
+    "leftovers-again": "git+ssh://git@github.com/avadavat/leftovers-again.git",
     "patch-package": "^6.2.1"
   },
   "devDependencies": {
