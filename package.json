@@ -5,7 +5,7 @@
     "leftovers-again": "git+ssh://git@github.com/avadavat/leftovers-again.git"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^2.0.2"
   },
   "scripts": {
     "develop": "nodemon src/app.js",
