@@ -10,8 +10,7 @@
   "scripts": {
     "develop": "nodemon src/app.js",
     "start": "node src/app.js",
-    "server": "cd Pokemon-Showdown && npm start",
-    "postinstall": "patch-package"
+    "server": "cd Pokemon-Showdown && npm start"
   },
   "description": "the very best",
   "main": "src/bot.js",
