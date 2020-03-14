@@ -1,4 +1,5 @@
 # deep-indigo
+Pokemon bot built off of [leftovers-again](https://github.com/dramamine/leftovers-again) & [Pokemon-Showdown](https://github.com/smogon/Pokemon-Showdown)
 
 # Setup
 1. Have a local Pokemon-Showdown server running:
