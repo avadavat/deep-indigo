@@ -1,5 +1,5 @@
 # deep-indigo
-Pokemon bot built off of [leftovers-again](https://avadavat.github.io/leftovers-again/) & [Pokemon-Showdown](https://github.com/smogon/Pokemon-Showdown)
+Pokemon bot built off of [leftovers-again](https://avadavat.github.io/leftovers-again/) & [Pokemon-Showdown](https://github.com/dramamine/Pokemon-Showdown)
 
 # Setup
 1. Clone the repo
