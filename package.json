@@ -1,21 +1,37 @@
 {
   "name": "deep-indigo",
   "version": "0.0.0",
+  "description": "the very best",
+  "main": "src/bot.js",
+  "format": "gen7randombattle",
+  "accepts": "ALL",
+  "nickname": "Deepindigo",
   "dependencies": {
     "leftovers-again": "git+ssh://git@github.com/avadavat/leftovers-again.git",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "husky": "^4.2.3",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
   },
   "scripts": {
     "develop": "nodemon src/app.js",
     "start": "node src/app.js",
-    "server": "cd Pokemon-Showdown && npm start"
+    "server": "cd Pokemon-Showdown && npm start",
+    "prettier": "pretty-quick --staged --pattern \"**/*.*(js|jsx|ts|tsx)\"",
+    "prettier-check": "prettier --check \"**/*.*(js|jsx|ts|tsx)\""
   },
-  "description": "the very best",
-  "main": "src/bot.js",
-  "format": "gen7randombattle",
-  "accepts": "ALL",
-  "nickname": "Deepindigo"
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier"
+    }
+  }
 }
