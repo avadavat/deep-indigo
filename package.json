@@ -2,7 +2,8 @@
   "name": "deep-indigo",
   "version": "0.0.0",
   "dependencies": {
-    "leftovers-again": "git+ssh://git@github.com/avadavat/leftovers-again.git"
+    "leftovers-again": "git+ssh://git@github.com/avadavat/leftovers-again.git",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
