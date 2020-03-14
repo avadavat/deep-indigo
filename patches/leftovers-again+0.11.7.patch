@@ -1,0 +1,15 @@
+diff --git a/node_modules/leftovers-again/scripts/generate.js b/node_modules/leftovers-again/scripts/generate.js
+index 07caa87..0f19782 100755
+--- a/node_modules/leftovers-again/scripts/generate.js
++++ b/node_modules/leftovers-again/scripts/generate.js
+@@ -125,7 +125,9 @@ const questions = [
+  */
+ const writePackage = (source, more, destination) => {
+   const combined = Object.assign(source, more);
+-  fs.writeFile(destination, JSON.stringify(combined, null, 2));
++  fs.writeFile(destination, JSON.stringify(combined, null, 2), (err) => {
++    if (err) console.error('Error writing file:', destination, parsed, err);
++  });
+ };
+ 
+ /**
