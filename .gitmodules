@@ -1,0 +1,3 @@
+[submodule "Pokemon-Showdown"]
+	path = Pokemon-Showdown
+	url = https://github.com/dramamine/Pokemon-Showdown.git
