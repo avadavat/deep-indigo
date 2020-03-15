@@ -9,8 +9,6 @@ const { MOVE, SWITCH } = require('leftovers-again/src/decisions');
  * picks randomly from valid moves on its turn.
  */
 class Deepindigo {
-
-
   /**
    * Here's the main loop of your bot. `state` contains everything about the
    * current state of the game. Please read the documentation for more
@@ -20,13 +18,13 @@ class Deepindigo {
    *
    * @return {Decision}     A decision object.
    */
-  decide(state) { 
+  decide(state) {
     // `forceSwitch` occurs if your Pokemon has just fainted, or other moves
     // that mean you need to switch out your Pokemon
     if (state.forceSwitch) {
       const myMon = this.pickOne(
         // filter through your reserve of Pokemon for ones that aren't dead
-        state.self.reserve.filter( mon => !mon.active && !mon.dead )
+        state.self.reserve.filter(mon => !mon.active && !mon.dead)
       );
       // return a Decision object. SWITCH takes Pokemon objects, Pokemon names,
       // and the reserve index [0-5] of the Pokemon you're switching into.
@@ -35,7 +33,7 @@ class Deepindigo {
 
     const myMove = this.pickOne(
       // filter through your active Pokemon's moves for a move that isn't disabled
-      state.self.active.moves.filter( move => !move.disabled )
+      state.self.active.moves.filter(move => !move.disabled)
     );
     // return a Decision object. MOVE takes Move objects, move names, and
     // move indexes [0-3].
