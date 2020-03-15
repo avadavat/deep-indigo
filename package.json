@@ -7,7 +7,7 @@
   "accepts": "ALL",
   "nickname": "Deepindigo",
   "dependencies": {
-    "leftovers-again": "git+ssh://git@github.com/avadavat/leftovers-again.git",
+    "leftovers-again": "git+ssh://git@github.com/avadavat/leftovers-again.git#e79781b5d4aee9f78d3c7e4405e4083af2a118a8",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
