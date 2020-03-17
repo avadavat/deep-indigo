@@ -21,7 +21,7 @@
   "scripts": {
     "build": "tsc",
     "develop": "nodemon src/app.js",
-    "start": "node --experimental-modules --experimental-json-modules src/build/app.js",
+    "start": "node --experimental-modules --experimental-json-modules build/src/app.js",
     "server": "cd Pokemon-Showdown && npm start",
     "prettier": "pretty-quick --staged --pattern \"**/*.*(js|jsx|ts|tsx)\"",
     "prettier-check": "prettier --check \"**/*.*(js|jsx|ts|tsx)\"",
