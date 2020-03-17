@@ -25,10 +25,8 @@ import LeftoversAgain from 'leftovers-again';
  * Your code is pre-built with a very simple bot that chooses a team, then
  * picks randomly from valid moves on its turn.
  */
-export class DeepIndigo extends LeftoversAgain.AI {
-  constructor() {
-    super();
-  }
+export class DeepIndigo implements LeftoversAgain.AI {
+  constructor() {}
 
   /**
    * Here's the main loop of your bot. `state` contains everything about the

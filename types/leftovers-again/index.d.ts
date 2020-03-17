@@ -1,7 +1,7 @@
 declare module 'leftovers-again' {
   // declare namespace L {
 
-  class AI {
+  interface AI {
     decide(state: State, rqid: number): Decision;
     team(opponent: string): string;
   }
@@ -291,5 +291,5 @@ declare module 'leftovers-again' {
 
   function botFinder(path: string): object; // TODO
 
-  function start(metadata: object, Bot: AI): object; // TODO
+  function start(metadata: object, Bot: new () => AI): object; // TODO
 }
