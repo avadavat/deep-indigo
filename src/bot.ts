@@ -16,14 +16,15 @@
 //   PokemonData,
 // } from 'leftovers-again';
 
-import * as LeftoversAgain from 'leftovers-again';
-
+// import * as LeftoversAgain from 'leftovers-again';
+// const LeftoversAgain = require('leftovers-again');
+// import * as LeftoversAgain from 'leftovers-again';
+import LeftoversAgain from 'leftovers-again';
 /**
  * Your code is pre-built with a very simple bot that chooses a team, then
  * picks randomly from valid moves on its turn.
  */
-export class DeepIndigo {
-  //} extends LeftoversAgain.AI {
+export class DeepIndigo extends LeftoversAgain.AI {
   /**
    * Here's the main loop of your bot. `state` contains everything about the
    * current state of the game. Please read the documentation for more
