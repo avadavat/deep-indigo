@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": [
-      "esnext"
-    ],
+    "lib": ["esnext"],
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -14,18 +12,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react",
-    "types": [
-      "leftovers-again",
-      "node"
-    ],
+    "types": ["leftovers-again", "node"],
+    "typeRoots": ["./types", "node_modules/@types"],
     "outDir": "build"
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "build",
-    "node_modules",
-    "Pokemon-Showdown"
-  ]
+  "include": ["src"],
+  "exclude": ["build", "node_modules", "Pokemon-Showdown", "types"]
 }

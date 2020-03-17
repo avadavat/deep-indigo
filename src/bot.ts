@@ -2,15 +2,27 @@
  * Deepindigo
  *
  */
-import { AI } from 'leftovers-again/src/ai';
-import { Decision, MOVE, SWITCH } from 'leftovers-again/src/decisions';
-import { State } from 'leftovers-again/src/battle';
-import { PokemonData } from 'leftovers-again/src/model/pokemon';
+// import { AI } from 'leftovers-again/src/ai';
+// import { Decision, MOVE, SWITCH } from 'leftovers-again/src/decisions';
+// import { State } from 'leftovers-again/src/battle';
+// import { PokemonData } from 'leftovers-again/src/model/pokemon';
+
+// import {
+//   AI,
+//   Decision,
+//   MOVE,
+//   SWITCH,
+//   State,
+//   PokemonData,
+// } from 'leftovers-again';
+
+import * as LA from 'leftovers-again';
+
 /**
  * Your code is pre-built with a very simple bot that chooses a team, then
  * picks randomly from valid moves on its turn.
  */
-export class DeepIndigo extends AI {
+export class DeepIndigo extends LA.AI {
   /**
    * Here's the main loop of your bot. `state` contains everything about the
    * current state of the game. Please read the documentation for more
@@ -20,7 +32,7 @@ export class DeepIndigo extends AI {
    *
    * @return {Decision}     A decision object.
    */
-  decide(state: State): Decision {
+  decide(state: LA.State): LA.Decision {
     // `forceSwitch` occurs if your Pokemon has just fainted, or other moves
     // that mean you need to switch out your Pokemon
     if (state.forceSwitch) {
@@ -30,16 +42,16 @@ export class DeepIndigo extends AI {
       );
       // return a Decision object. SWITCH takes Pokemon objects, Pokemon names,
       // and the reserve index [0-5] of the Pokemon you're switching into.
-      return new SWITCH(myMon);
+      return new LA.SWITCH(myMon);
     }
 
     const myMove = this.pickOne(
       // filter through your active Pokemon's moves for a move that isn't disabled
-      (state.self.active as PokemonData).moves.filter(move => !move.disabled)
+      (state.self.active as LA.PokemonData).moves.filter(move => !move.disabled)
     );
     // return a Decision object. MOVE takes Move objects, move names, and
     // move indexes [0-3].
-    return new MOVE(myMove);
+    return new LA.MOVE(myMove);
   }
 
   // randomly chooses an element from an array
