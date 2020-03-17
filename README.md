@@ -15,6 +15,7 @@ npm run server
 3. Start the bot
 ```
 npm install
+npm run build
 npm start
 ```
 4. Navigate to localhost:8000 & challenge the bot to a battle
