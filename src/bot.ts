@@ -2,7 +2,14 @@
  * Deepindigo
  *
  */
-import { PokemonData, State, MOVE, SWITCH, AI } from 'leftovers-again';
+import {
+  PokemonData,
+  State,
+  MOVE,
+  SWITCH,
+  AI,
+  Decision,
+} from 'leftovers-again';
 /**
  * Your code is pre-built with a very simple bot that chooses a team, then
  * picks randomly from valid moves on its turn.
@@ -17,7 +24,7 @@ export class DeepIndigo extends AI {
    *
    * @return {Decision}     A decision object.
    */
-  decide(state: State) {
+  decide(state: State): Decision {
     // `forceSwitch` occurs if your Pokemon has just fainted, or other moves
     // that mean you need to switch out your Pokemon
     if (state.forceSwitch) {
