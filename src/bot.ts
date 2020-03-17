@@ -2,11 +2,12 @@
  * Deepindigo
  *
  */
-import AI from 'leftovers-again/src/ai';
+import ai from 'leftovers-again/src/ai';
+const AI = ai.AI;
 import decisions from 'leftovers-again/src/decisions';
 type Decision = decisions.Decision;
-type MOVE = decisions.MOVE;
-type SWITCH = decisions.SWITCH;
+const MOVE = decisions.MOVE;
+const SWITCH = decisions.SWITCH;
 import battle from 'leftovers-again/src/battle';
 type State = battle.State;
 import pokemon from 'leftovers-again/src/model/pokemon';
