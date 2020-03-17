@@ -4,6 +4,5 @@
  */
 import LeftoversAgain from 'leftovers-again';
 import DeepIndigo from './bot';
-import * as metadata from '../package.json';
-export class X {}
+import metadata from '../package.json';
 LeftoversAgain.start(metadata, DeepIndigo);
