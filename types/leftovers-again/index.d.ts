@@ -1,6 +1,4 @@
 declare module 'leftovers-again' {
-  // declare namespace L {
-
   interface AI {
     decide(state: State, rqid: number): Decision;
     team(opponent: string): string;

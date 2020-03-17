@@ -2,23 +2,6 @@
  * Deepindigo
  *
  */
-// import { AI } from 'leftovers-again/src/ai';
-// import { Decision, MOVE, SWITCH } from 'leftovers-again/src/decisions';
-// import { State } from 'leftovers-again/src/battle';
-// import { PokemonData } from 'leftovers-again/src/model/pokemon';
-
-// import {
-//   AI,
-//   Decision,
-//   MOVE,
-//   SWITCH,
-//   State,
-//   PokemonData,
-// } from 'leftovers-again';
-
-// import * as LeftoversAgain from 'leftovers-again';
-// const LeftoversAgain = require('leftovers-again');
-// import * as LeftoversAgain from 'leftovers-again';
 import LeftoversAgain from 'leftovers-again';
 
 /**
