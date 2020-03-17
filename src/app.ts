@@ -6,4 +6,4 @@ import LeftoversAgain from 'leftovers-again';
 import { DeepIndigo } from './bot';
 import * as metadata from '../package.json';
 export class X {}
-LeftoversAgain.start(metadata, new DeepIndigo());
+LeftoversAgain.start(metadata, DeepIndigo as any);
