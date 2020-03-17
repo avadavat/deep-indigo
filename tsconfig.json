@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "lib": [
-      "dom",
-      "dom.iterable",
       "esnext"
     ],
     "allowJs": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -16,10 +13,19 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "types": [
+      "leftovers-again",
+      "node"
+    ],
+    "outDir": "build"
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "build",
+    "node_modules",
+    "Pokemon-Showdown"
   ]
 }

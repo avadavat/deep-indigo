@@ -6,8 +6,10 @@
   "format": "gen7randombattle",
   "accepts": "ALL",
   "nickname": "Deepindigo",
+  "type": "module",
   "dependencies": {
-    "leftovers-again": "git+ssh://git@github.com/avadavat/leftovers-again.git#e79781b5d4aee9f78d3c7e4405e4083af2a118a8",
+    "@types/node": "^13.9.1",
+    "leftovers-again": "git+ssh://git@github.com/avadavat/leftovers-again.git#d989f45aee18463ad67742c4e38331845339e63e",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
@@ -17,6 +19,7 @@
     "pretty-quick": "^2.0.1"
   },
   "scripts": {
+    "build": "tsc",
     "develop": "nodemon src/app.js",
     "start": "node src/app.js",
     "server": "cd Pokemon-Showdown && npm start",

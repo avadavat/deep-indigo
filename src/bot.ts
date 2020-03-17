@@ -2,13 +2,12 @@
  * Deepindigo
  *
  */
-const { MOVE, SWITCH } = require('leftovers-again/src/decisions');
-
+import { PokemonData, State, MOVE, SWITCH, AI } from 'leftovers-again';
 /**
  * Your code is pre-built with a very simple bot that chooses a team, then
  * picks randomly from valid moves on its turn.
  */
-class Deepindigo {
+export class DeepIndigo extends AI {
   /**
    * Here's the main loop of your bot. `state` contains everything about the
    * current state of the game. Please read the documentation for more
@@ -18,7 +17,7 @@ class Deepindigo {
    *
    * @return {Decision}     A decision object.
    */
-  decide(state) {
+  decide(state: State) {
     // `forceSwitch` occurs if your Pokemon has just fainted, or other moves
     // that mean you need to switch out your Pokemon
     if (state.forceSwitch) {
@@ -33,7 +32,7 @@ class Deepindigo {
 
     const myMove = this.pickOne(
       // filter through your active Pokemon's moves for a move that isn't disabled
-      state.self.active.moves.filter(move => !move.disabled)
+      (state.self.active as PokemonData).moves.filter(move => !move.disabled)
     );
     // return a Decision object. MOVE takes Move objects, move names, and
     // move indexes [0-3].
@@ -41,9 +40,7 @@ class Deepindigo {
   }
 
   // randomly chooses an element from an array
-  pickOne(arr) {
+  pickOne(arr: Array<any>) {
     return arr[Math.floor(Math.random() * arr.length)];
   }
 }
-
-module.exports = Deepindigo;
