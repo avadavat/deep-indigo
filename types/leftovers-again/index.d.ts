@@ -1,7 +1,8 @@
 declare module 'leftovers-again' {
   // declare namespace L {
   class AI {
-    doSomething(): void;
+    decide(state: State, rqid: number): Decision;
+    team(opponent: string): string;
   }
 
   class Battle {
