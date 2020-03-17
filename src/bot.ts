@@ -2,19 +2,13 @@
  * Deepindigo
  *
  */
-import {
-  PokemonData,
-  State,
-  MOVE,
-  SWITCH,
-  AI,
-  Decision,
-} from 'leftovers-again';
+import { LeftoversAgainTypes } from './types';
+
 /**
  * Your code is pre-built with a very simple bot that chooses a team, then
  * picks randomly from valid moves on its turn.
  */
-export class DeepIndigo extends AI {
+export class DeepIndigo implements LeftoversAgainTypes.AI {
   /**
    * Here's the main loop of your bot. `state` contains everything about the
    * current state of the game. Please read the documentation for more
