@@ -2,14 +2,10 @@
  * Deepindigo
  *
  */
-import {
-  PokemonData,
-  State,
-  MOVE,
-  SWITCH,
-  AI,
-  Decision,
-} from 'leftovers-again';
+import { AI } from 'leftovers-again/src/ai';
+import { Decision, MOVE, SWITCH } from 'leftovers-again/src/decisions';
+import { State } from 'leftovers-again/src/battle';
+import { PokemonData } from 'leftovers-again/src/model/pokemon';
 /**
  * Your code is pre-built with a very simple bot that chooses a team, then
  * picks randomly from valid moves on its turn.
