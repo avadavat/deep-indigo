@@ -9,7 +9,7 @@
   "type": "module",
   "dependencies": {
     "@types/node": "^13.9.1",
-    "leftovers-again": "git+ssh://git@github.com/avadavat/leftovers-again.git#4bc0e70abeb3856c3602b2a27e62fb40f5aa10c6",
+    "leftovers-again": "git+ssh://git@github.com/avadavat/leftovers-again.git#880cebf1d10aa2b5b31e214bf33bea434d66c206",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
