@@ -2,24 +2,13 @@
  * Deepindigo
  *
  */
-import ai from 'leftovers-again/src/ai';
-const AI = ai.AI;
-import decisions from 'leftovers-again/src/decisions';
-type Decision = decisions.Decision;
-const MOVE = decisions.MOVE;
-const SWITCH = decisions.SWITCH;
-import battle from 'leftovers-again/src/battle';
-type State = battle.State;
-import pokemon from 'leftovers-again/src/model/pokemon';
-type PokemonData = pokemon.PokemonData;
+import LeftoversAgain from 'leftovers-again';
+
 /**
  * Your code is pre-built with a very simple bot that chooses a team, then
  * picks randomly from valid moves on its turn.
  */
-export default class DeepIndigo extends AI {
-  constructor() {
-    super();
-  }
+export default class DeepIndigo extends LeftoversAgain.AI {
   /**
    * Here's the main loop of your bot. `state` contains everything about the
    * current state of the game. Please read the documentation for more
@@ -29,7 +18,7 @@ export default class DeepIndigo extends AI {
    *
    * @return {Decision}     A decision object.
    */
-  decide(state: State): Decision {
+  decide(state: LeftoversAgain.State): LeftoversAgain.Decision {
     // `forceSwitch` occurs if your Pokemon has just fainted, or other moves
     // that mean you need to switch out your Pokemon
     if (state.forceSwitch) {
@@ -39,16 +28,18 @@ export default class DeepIndigo extends AI {
       );
       // return a Decision object. SWITCH takes Pokemon objects, Pokemon names,
       // and the reserve index [0-5] of the Pokemon you're switching into.
-      return new SWITCH(myMon);
+      return new LeftoversAgain.SWITCH(myMon);
     }
 
     const myMove = this.pickOne(
       // filter through your active Pokemon's moves for a move that isn't disabled
-      (state.self.active as PokemonData).moves.filter(move => !move.disabled)
+      (state.self.active as LeftoversAgain.PokemonData).moves.filter(
+        move => !move.disabled
+      )
     );
     // return a Decision object. MOVE takes Move objects, move names, and
     // move indexes [0-3].
-    return new MOVE(myMove);
+    return new LeftoversAgain.MOVE(myMove);
   }
 
   // randomly chooses an element from an array
