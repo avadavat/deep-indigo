@@ -2,7 +2,6 @@
  * Deepindigo
  *
  */
-
 import LeftoversAgain from 'leftovers-again';
 
 /**
