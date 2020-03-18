@@ -10,9 +10,6 @@ import LeftoversAgain from 'leftovers-again';
  * picks randomly from valid moves on its turn.
  */
 export default class DeepIndigo extends LeftoversAgain.AI {
-  constructor() {
-    super();
-  }
   /**
    * Here's the main loop of your bot. `state` contains everything about the
    * current state of the game. Please read the documentation for more
