@@ -5,7 +5,7 @@
   "main": "src/bot.js",
   "format": "gen7randombattle",
   "accepts": "ALL",
-  "nickname": "Deepindigo",
+  "nickname": "deep-indigo-ai",
   "type": "module",
   "dependencies": {
     "@types/node": "^13.9.1",
