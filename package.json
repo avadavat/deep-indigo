@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "the very best",
   "main": "src/bot.js",
-  "format": "gen7randombattle",
+  "format": "gen8randombattle",
   "accepts": "ALL",
   "nickname": "deep-indigo-ai",
   "type": "module",
